@@ -3,6 +3,22 @@
 
   const config = window.SITE_CONFIG || {};
   const body = document.body;
+
+  // Keep the product tour directly beside the harness demonstration in both
+  // reading and presentation modes, while leaving each section independently
+  // addressable by its existing anchor.
+  const harnessDemonstration = document.querySelector('[data-title="Harness demonstration"]');
+  const toolSequence = ["tools", "claude", "chatgpt", "antigravity"]
+    .map((id) => document.getElementById(id));
+
+  if (harnessDemonstration && toolSequence.every(Boolean)) {
+    let insertionPoint = harnessDemonstration;
+    toolSequence.forEach((toolBeat) => {
+      insertionPoint.insertAdjacentElement("afterend", toolBeat);
+      insertionPoint = toolBeat;
+    });
+  }
+
   const beats = Array.from(document.querySelectorAll(".beat"));
   const presentButtons = Array.from(document.querySelectorAll("#present-button, [data-enter-presentation]"));
   const previousButton = document.getElementById("previous-beat");
