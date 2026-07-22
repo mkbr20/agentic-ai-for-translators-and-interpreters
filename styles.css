@@ -692,6 +692,66 @@ h3 {
   -webkit-text-stroke: 2px var(--coral);
 }
 
+.method-prompt {
+  position: relative;
+  margin-top: 22px;
+  padding: 18px 76px 17px 20px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 10px 28px rgba(31, 42, 37, 0.06);
+}
+
+.method-prompt > p {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(0.96rem, 1.35vw, 1.08rem);
+  line-height: 1.45;
+}
+
+.method-prompt .method-prompt-label {
+  margin-bottom: 7px;
+  color: var(--teal-deep);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.method-skill {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+}
+
+.method-skill > span {
+  color: var(--ink-soft);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.method-skill a {
+  color: var(--teal-deep);
+  font-weight: 900;
+}
+
+.method-skill code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+}
+
+.method-skill small {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
 .prompt-card {
   position: relative;
   margin: 30px 0 20px;
@@ -1122,6 +1182,20 @@ body.presentation-mode .tool-heading {
 
 body.presentation-mode .tool-heading h2 {
   font-size: clamp(2.8rem, 4.5vw, 5rem);
+}
+
+body.presentation-mode .method-beat h2 {
+  font-size: clamp(2.8rem, 4.6vw, 5.2rem);
+}
+
+body.presentation-mode .method-prompt {
+  margin-top: 16px;
+  padding: 16px 18px;
+}
+
+body.presentation-mode .method-skill {
+  margin-top: 9px;
+  padding-top: 9px;
 }
 
 body.presentation-mode .surface-pair,

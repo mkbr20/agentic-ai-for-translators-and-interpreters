@@ -211,7 +211,10 @@
   }
 
   async function copyPrompt(button) {
-    const prompt = document.getElementById("grill-prompt").textContent.trim();
+    const promptContainer = button.closest("[data-agent-prompt]");
+    const promptText = promptContainer?.querySelector("[data-prompt-text]");
+    const prompt = promptText?.textContent.trim() || "";
+    if (!prompt) return;
     try {
       await navigator.clipboard.writeText(prompt);
     } catch (error) {

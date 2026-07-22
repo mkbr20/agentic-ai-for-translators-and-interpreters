@@ -246,6 +246,16 @@
           <h2>Understand the whole</h2>
           <p class="lead">Surface and organise the purpose, people, needs, constraints, source material, and desired result before anything is built.</p>
           <p>You do not have to know all the answers. You do need a process that helps you discover the right questions.</p>
+          <div class="method-prompt" data-agent-prompt>
+            <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the understand-the-whole prompt">Copy</button>
+            <p class="method-prompt-label">Try this with an agent</p>
+            <p data-prompt-text>Interview me one question at a time about the tool I want to make. Help me uncover its purpose, users, needs, constraints, source material, and desired result before we build anything.</p>
+            <div class="method-skill">
+              <span>Matt Pocock skill</span>
+              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$grill-with-docs</code> <span aria-hidden="true">↗</span></a>
+              <small>It interviews you and records the decisions as you go.</small>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -259,6 +269,16 @@
           <h2>Write the blueprint</h2>
           <p class="lead">Create a short plain-language document describing who the tool serves, what it must do, and what must be true for it to count as complete.</p>
           <p>A blueprint gives the agent a stable view of the whole before implementation begins.</p>
+          <div class="method-prompt" data-agent-prompt>
+            <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the write-the-blueprint prompt">Copy</button>
+            <p class="method-prompt-label">Try this with an agent</p>
+            <p data-prompt-text>Turn everything we have agreed into a clear blueprint. Describe who the tool is for, what it must do, what is outside the plan, and how we will know it is complete.</p>
+            <div class="method-skill">
+              <span>Matt Pocock skill</span>
+              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$to-prd</code> <span aria-hidden="true">↗</span></a>
+              <small>It turns the conversation into a clear build blueprint.</small>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -272,6 +292,16 @@
           <h2>Break it into buildable parts</h2>
           <p class="lead">Turn the blueprint into focused stages that each produce something testable.</p>
           <p>Small stages create useful feedback. They also make it easier to identify where something has gone wrong.</p>
+          <div class="method-prompt" data-agent-prompt>
+            <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the break-it-into-parts prompt">Copy</button>
+            <p class="method-prompt-label">Try this with an agent</p>
+            <p data-prompt-text>Break this blueprint into small, ordered pieces of work. Each piece should create something useful that can be checked before the next piece begins.</p>
+            <div class="method-skill">
+              <span>Matt Pocock skill</span>
+              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$to-issues</code> <span aria-hidden="true">↗</span></a>
+              <small>It turns the blueprint into buildable pieces of work.</small>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -285,6 +315,16 @@
           <h2>Build and check each stage</h2>
           <p class="lead">Build the planned parts one at a time, check that each works, then combine them into the intended whole.</p>
           <p>The plan guides the work. Testing tells you what is actually true.</p>
+          <div class="method-prompt" data-agent-prompt>
+            <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the build-and-check prompt">Copy</button>
+            <p class="method-prompt-label">Try this with an agent</p>
+            <p data-prompt-text>Build the planned pieces one at a time. Check each piece against the blueprint, test that it works, and stop if an important decision is missing.</p>
+            <div class="method-skill">
+              <span>Matt Pocock skill</span>
+              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$implement</code> <span aria-hidden="true">↗</span></a>
+              <small>It carries out the planned work and checks the result.</small>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -295,9 +335,9 @@
         <div>
           <p class="eyebrow">A practical starting move</p>
           <h2>Ask the agent to interview you before it builds.</h2>
-          <div class="prompt-card">
+          <div class="prompt-card" data-agent-prompt>
             <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the grill-me prompt">Copy</button>
-            <p id="grill-prompt">Grill me about every aspect of this idea. Ask one question at a time and give me your recommended answer. Do not start building until we agree on what should be created.</p>
+            <p id="grill-prompt" data-prompt-text>Grill me about every aspect of this idea. Ask one question at a time and give me your recommended answer. Do not start building until we agree on what should be created.</p>
           </div>
           <p>This presentation website was planned using that same process before any code was written.</p>
         </div>
