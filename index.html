@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical introduction to agentic AI for translators and interpreters, presented by Michael Broughton.">
+  <meta name="theme-color" content="#f6f1e7">
+  <title>Agentic AI for Translators &amp; Interpreters</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" aria-label="Site header">
+    <a class="site-mark" href="#opening" aria-label="Return to the beginning">
+      <span class="site-mark-dot" aria-hidden="true"></span>
+      <span>Agentic AI</span>
+    </a>
+    <nav class="reading-nav" aria-label="Main sections">
+      <a href="#agents">Agents</a>
+      <a href="#thinking">Thinking</a>
+      <a href="#method">Method</a>
+      <a href="#tools">Tools</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <button class="button button-primary" id="present-button" type="button">
+      Present
+      <span aria-hidden="true">→</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <!-- Beat 1 -->
+    <article class="beat hero" id="opening" data-title="Opening">
+      <div class="beat-inner hero-grid">
+        <div>
+          <p class="eyebrow">Presented by Michael Broughton</p>
+          <h1>Agentic AI for<br>Translators &amp; Interpreters</h1>
+          <p class="hero-subtitle">From prompting to building</p>
+          <div class="hero-actions">
+            <button class="button button-primary hero-present" type="button" data-enter-presentation>
+              Enter Presentation Mode
+            </button>
+            <a class="button button-quiet" href="https://office.ausit.org/event-6748203" target="_blank" rel="noopener noreferrer">
+              AUSIT event page <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-statement">
+          <p>Most conversations ask what AI will do to translators and interpreters.</p>
+          <p class="hero-question">Tonight, we ask what translators and interpreters can do with AI.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 2 -->
+    <article class="beat" id="possibilities" data-title="Possibilities">
+      <div class="beat-inner">
+        <p class="eyebrow">Begin with possibility</p>
+        <h2>What could a tool make possible?</h2>
+        <div class="possibility-grid">
+          <section class="possibility-card">
+            <span class="card-number">01</span>
+            <h3>Remove a nuisance</h3>
+            <p>Turn a difficult bilingual PDF into a searchable dictionary. Clean OCR. Organise project files.</p>
+          </section>
+          <section class="possibility-card">
+            <span class="card-number">02</span>
+            <h3>Create a capability</h3>
+            <p>Build a terminology workspace, an interpreter briefing tool, or a quality-assurance process.</p>
+          </section>
+          <section class="possibility-card">
+            <span class="card-number">03</span>
+            <h3>Help a community</h3>
+            <p>Create a multilingual resource navigator, a human-reviewed term bank, or something nobody has thought to make yet.</p>
+          </section>
+        </div>
+        <div class="reflection-prompt">
+          <span>Keep this question with you</span>
+          <strong>What tool have you always wanted?</strong>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 3 -->
+    <article class="beat" id="agents" data-title="The model">
+      <div class="beat-inner split-layout">
+        <div>
+          <p class="eyebrow">Part one</p>
+          <h2>Start with the model</h2>
+          <p class="lead">A model is the core AI component that works with language and information.</p>
+          <p>It can interpret instructions, recognise patterns, reason through material, and produce a response.</p>
+        </div>
+        <div class="concept-object model-object" aria-label="A model represented as a central reasoning core">
+          <div class="concept-core">MODEL</div>
+          <span>language</span>
+          <span>information</span>
+          <span>reasoning</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 4 -->
+    <article class="beat" data-title="The harness">
+      <div class="beat-inner split-layout">
+        <div>
+          <p class="eyebrow">Part two</p>
+          <h2>Then add the harness</h2>
+          <p class="lead">A harness is the working environment around the model.</p>
+          <p>It can give the model access to files, tools, memory, and the ability to keep working through several steps.</p>
+        </div>
+        <div class="harness-map" aria-label="A harness connecting a model to files, tools, memory and steps">
+          <div class="harness-core">MODEL</div>
+          <div class="orbit orbit-one">FILES</div>
+          <div class="orbit orbit-two">TOOLS</div>
+          <div class="orbit orbit-three">MEMORY</div>
+          <div class="orbit orbit-four">STEPS</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 5 -->
+    <article class="beat formula-beat" data-title="Agent = model + harness">
+      <div class="beat-inner centre-layout">
+        <p class="eyebrow">The mental model</p>
+        <div class="formula" aria-label="An agent equals a model plus a harness">
+          <span>AGENT</span>
+          <span class="formula-symbol">=</span>
+          <span>MODEL</span>
+          <span class="formula-symbol">+</span>
+          <span>HARNESS</span>
+        </div>
+        <p class="lead constrained">The model provides the intelligence. The harness gives it a place to work and ways to act.</p>
+      </div>
+    </article>
+
+    <!-- Beat 6 -->
+    <article class="beat" data-title="Harness demonstration">
+      <div class="beat-inner centre-layout">
+        <p class="eyebrow">Live demonstration</p>
+        <h2>Let’s look inside three harnesses.</h2>
+        <div class="interface-grid" aria-label="Three agent harnesses">
+          <div class="interface-card claude-interface">
+            <div class="window-bar"><i></i><i></i><i></i></div>
+            <div class="window-body"><span>C</span><strong>Claude Cowork</strong></div>
+          </div>
+          <div class="interface-card openai-interface">
+            <div class="window-bar"><i></i><i></i><i></i></div>
+            <div class="window-body"><span>O</span><strong>ChatGPT Work</strong></div>
+          </div>
+          <div class="interface-card google-interface">
+            <div class="window-bar"><i></i><i></i><i></i></div>
+            <div class="window-body"><span>G</span><strong>Google Antigravity</strong></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 7 -->
+    <article class="beat" id="thinking" data-title="The paradigm shift">
+      <div class="beat-inner">
+        <p class="eyebrow">A change in thinking</p>
+        <h2>From task and response<br>to systems and design</h2>
+        <div class="thinking-contrast">
+          <section>
+            <h3>Task-and-Response Thinking</h3>
+            <div class="linear-flow">
+              <span>Translate this.</span><b>→</b><span>Summarise this.</span><b>→</b><span>Tell me about this.</span>
+            </div>
+            <p>You work forward through requests and responses. Each answer may suggest what to ask next.</p>
+          </section>
+          <section class="system-panel">
+            <h3>Systems-and-Design Thinking</h3>
+            <div class="system-cluster" aria-hidden="true">
+              <span>purpose</span><span>people</span><span>information</span><span>parts</span><span>success</span>
+            </div>
+            <p>You begin with the whole. You work backward to understand and design its parts, then build forward in planned stages.</p>
+          </section>
+        </div>
+        <p class="paradigm-line">The shift is not from small tasks to large tasks. It is from discovering the work through a chain of requests to designing the whole before decomposing it into tasks.</p>
+      </div>
+    </article>
+
+    <!-- Beat 8 -->
+    <article class="beat showcase-beat" data-title="What could you make?">
+      <div class="beat-inner centre-layout">
+        <p class="eyebrow">Live examples</p>
+        <h2>What could you make?</h2>
+        <p class="showcase-copy">I have made a few things for people around me, and a few for myself. Let me show you.</p>
+      </div>
+    </article>
+
+    <!-- Beat 9 -->
+    <article class="beat" data-title="Vibe coding">
+      <div class="beat-inner split-layout">
+        <div>
+          <p class="eyebrow">A useful term</p>
+          <h2>What is vibe coding?</h2>
+          <p class="lead">Vibe coding is a term used to describe creating software by explaining what you want in ordinary language.</p>
+          <p>The AI produces and changes the code while you concentrate mainly on what the finished tool should do. You try what it creates, then tell it what to change.</p>
+        </div>
+        <aside class="source-card">
+          <p>That is what we are doing today. We are vibe coding.</p>
+          <a href="https://x.com/karpathy/status/1886192184808149383?lang=en" target="_blank" rel="noopener noreferrer">Andrej Karpathy’s original post <span aria-hidden="true">↗</span></a>
+          <a href="https://karpathy.bearblog.dev/vibe-coding-menugen/" target="_blank" rel="noopener noreferrer">MenuGen: a real example <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Beat 10 -->
+    <article class="beat map-beat" data-title="Vibe coding with a map">
+      <div class="beat-inner centre-layout">
+        <p class="eyebrow">Our approach</p>
+        <h2>Vibe coding with a map</h2>
+        <p class="lead constrained">Before we build, we step back and think about the whole system. We work backward to understand and design its parts, then build forward in planned stages.</p>
+        <div class="map-line" aria-hidden="true">
+          <span>WHOLE</span><i></i><span>DESIGN</span><i></i><span>PARTS</span><i></i><span>BUILD</span>
+        </div>
+        <p>This preparation does not remove experimentation or creativity. It makes the process more intentional and reduces the time spent stabbing in the dark.</p>
+      </div>
+    </article>
+
+    <!-- Beat 11 -->
+    <article class="beat" id="method" data-title="The method">
+      <div class="beat-inner">
+        <p class="eyebrow">The method</p>
+        <h2>Design backward.<br>Build forward.</h2>
+        <p class="lead constrained-left">These ideas are not entirely new. Systems thinking, product design, and software engineering have developed related ways of planning complex work for decades. Agentic tools are making those practices useful to a much wider group of people.</p>
+        <ol class="method-rail" aria-label="Four-stage building method">
+          <li><span>1</span>Understand the whole</li>
+          <li><span>2</span>Write the blueprint</li>
+          <li><span>3</span>Break it into parts</li>
+          <li><span>4</span>Build and check</li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- Beat 12 -->
+    <article class="beat method-beat" data-title="Understand the whole">
+      <div class="beat-inner split-layout">
+        <div class="step-number">01</div>
+        <div>
+          <p class="eyebrow">Context engineering</p>
+          <h2>Understand the whole</h2>
+          <p class="lead">Surface and organise the purpose, people, needs, constraints, source material, and desired result before anything is built.</p>
+          <p>You do not have to know all the answers. You do need a process that helps you discover the right questions.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 13 -->
+    <article class="beat method-beat" data-title="Write the blueprint">
+      <div class="beat-inner split-layout">
+        <div class="step-number">02</div>
+        <div>
+          <p class="eyebrow">Build Blueprint</p>
+          <h2>Write the blueprint</h2>
+          <p class="lead">Create a short plain-language document describing who the tool serves, what it must do, and what must be true for it to count as complete.</p>
+          <p>A blueprint gives the agent a stable view of the whole before implementation begins.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 14 -->
+    <article class="beat method-beat" data-title="Break it into buildable parts">
+      <div class="beat-inner split-layout">
+        <div class="step-number">03</div>
+        <div>
+          <p class="eyebrow">Task decomposition</p>
+          <h2>Break it into buildable parts</h2>
+          <p class="lead">Turn the blueprint into focused stages that each produce something testable.</p>
+          <p>Small stages create useful feedback. They also make it easier to identify where something has gone wrong.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 15 -->
+    <article class="beat method-beat" data-title="Build and check">
+      <div class="beat-inner split-layout">
+        <div class="step-number">04</div>
+        <div>
+          <p class="eyebrow">Implementation</p>
+          <h2>Build and check each stage</h2>
+          <p class="lead">Build the planned parts one at a time, check that each works, then combine them into the intended whole.</p>
+          <p>The plan guides the work. Testing tells you what is actually true.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Beat 16 -->
+    <article class="beat" data-title="Ask the agent to interview you">
+      <div class="beat-inner split-layout">
+        <div>
+          <p class="eyebrow">A practical starting move</p>
+          <h2>Ask the agent to interview you before it builds.</h2>
+          <div class="prompt-card">
+            <button class="copy-button" type="button" data-copy-prompt aria-label="Copy the grill-me prompt">Copy</button>
+            <p id="grill-prompt">Grill me about every aspect of this idea. Ask one question at a time and give me your recommended answer. Do not start building until we agree on what should be created.</p>
+          </div>
+          <p>This presentation website was planned using that same process before any code was written.</p>
+        </div>
+        <aside class="thanks-card">
+          <h3>A note of thanks</h3>
+          <p>I learned this way of working from Matt Pocock. I used his agent skills to plan this session and to develop much of the language and process you see here. I am still learning, but his work gave me a practical place to start.</p>
+          <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">Matt’s skills on GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.youtube.com/watch?v=M6mYodf0dJM" target="_blank" rel="noopener noreferrer">The video that introduced me to these ideas <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Beat 17 -->
+    <article class="beat privacy-beat" data-title="Privacy pause">
+      <div class="beat-inner">
+        <p class="eyebrow">Before you upload anything</p>
+        <h2>If the material is confidential, pause.</h2>
+        <p class="privacy-rule">Do not upload it until you understand the account, settings, permissions, and connected services involved. When unsure, use public, synthetic, or expressly authorised sample material.</p>
+        <div class="sandbox-note">
+          <strong>A sandbox limits what software can touch.</strong>
+          <span>It does not automatically keep your information on your computer or make it confidential.</span>
+        </div>
+        <p class="small-note">This is practical risk-management guidance, not legal advice. Your client agreement, professional obligations, and applicable law still govern the work.</p>
+      </div>
+    </article>
+
+    <!-- Beat 18 -->
+    <article class="beat" id="tools" data-title="Explore the tools">
+      <div class="beat-inner">
+        <p class="eyebrow">A starting point, not a verdict</p>
+        <h2>Explore the tools</h2>
+        <p class="lead constrained-left">Not sure yet? That is normal. Start small, use sample material, and see what each tool makes possible.</p>
+        <div class="comparison-principles">
+          <span>Direct download links</span>
+          <span>Current subscriptions</span>
+          <span>Work Surface differences</span>
+          <span>Execution and isolation</span>
+          <span>Data handling</span>
+        </div>
+        <p class="checked-date">Product information checked <time datetime="2026-07-22">22 July 2026</time>. These products change quickly. Use the official links beside each claim.</p>
+      </div>
+    </article>
+
+    <!-- Beat 19 -->
+    <article class="beat tool-beat" id="claude" data-title="Claude">
+      <div class="beat-inner">
+        <div class="tool-heading">
+          <div class="tool-monogram claude-monogram">C</div>
+          <div>
+            <p class="eyebrow">Anthropic</p>
+            <h2>Claude</h2>
+            <p class="tool-summary">Cowork is organised around longer knowledge-work outcomes. Claude Code is organised around software projects and development environments. Both can run code.</p>
+          </div>
+          <div class="tool-actions">
+            <a class="button button-primary" href="https://claude.com/download" target="_blank" rel="noopener noreferrer">Download Claude <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Check current price ↗</a>
+          </div>
+        </div>
+
+        <div class="surface-pair">
+          <section>
+            <span class="surface-label">Cowork</span>
+            <h3>Work outcome first</h3>
+            <p>Useful for research, documents, file organisation, data transformation, and other longer multi-step work.</p>
+            <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" target="_blank" rel="noopener noreferrer">Official Cowork guide ↗</a>
+          </section>
+          <section>
+            <span class="surface-label">Claude Code</span>
+            <h3>Software project first</h3>
+            <p>Useful for building and changing software through a selected project folder, repository, terminal, or cloud environment.</p>
+            <a href="https://code.claude.com/docs/en/desktop" target="_blank" rel="noopener noreferrer">Official Claude Code guide ↗</a>
+          </section>
+        </div>
+
+        <div class="plan-strip" aria-label="Selected Claude individual plans">
+          <div><strong>Free</strong><span>US$0</span><small>Desktop available. Cowork not included.</small></div>
+          <div><strong>Pro</strong><span>US$20/month</span><small>Cowork and Code. Limited included use.</small></div>
+          <div><strong>Max 5×</strong><span>US$100/month</span><small>Higher included allowance.</small></div>
+          <div><strong>Max 20×</strong><span>US$200/month</span><small>Highest individual allowance.</small></div>
+        </div>
+
+        <details>
+          <summary>Where does the work run?</summary>
+          <div class="detail-content">
+            <p>Remote Cowork is now the documented default. Its agent loop and code run in a temporary isolated environment on Anthropic infrastructure. Older local Cowork deployments run the agent loop and connected-folder operations locally while code runs in a dedicated Linux virtual machine.</p>
+            <p>Claude Code can run against a local project, in Anthropic’s cloud, over SSH, or through Windows Subsystem for Linux. Local Code is permission-gated but is not automatically a virtual machine.</p>
+            <a href="https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview" target="_blank" rel="noopener noreferrer">Cowork architecture ↗</a>
+            <a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener noreferrer">Claude Code sandboxing ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Where can the data go?</summary>
+          <div class="detail-content">
+            <p>Remote Cowork processes opened local files on Anthropic servers. Local Claude Code commands run locally, but prompts, relevant file content, outputs, and code context are sent for model processing.</p>
+            <p>On consumer accounts, conversations can be used for model improvement when Model Improvement is enabled. Incognito chats are not used for model improvement. Commercial chats and coding sessions are not used for training by default.</p>
+            <a href="https://support.claude.com/en/articles/13364135-use-claude-cowork-safely" target="_blank" rel="noopener noreferrer">Cowork safety ↗</a>
+            <a href="https://code.claude.com/docs/en/data-usage" target="_blank" rel="noopener noreferrer">Claude Code data flow ↗</a>
+            <a href="https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training" target="_blank" rel="noopener noreferrer">Consumer training controls ↗</a>
+            <a href="https://privacy.claude.com/en/articles/7996885-how-do-you-use-personal-data-in-model-training" target="_blank" rel="noopener noreferrer">Commercial data policy ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Individual subscription details</summary>
+          <div class="detail-content">
+            <p>Anthropic publishes individual prices in US dollars and says regional pricing, currency, and taxes can vary. Pro is US$20 monthly or US$200 annually. Max 5× is US$100 monthly and Max 20× is US$200 monthly.</p>
+            <p>Reaching the included Pro or Max allowance does not silently enable unlimited billing. Optional usage credits must be enabled separately, and Anthropic provides a monthly cap and auto-reload controls.</p>
+            <a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan" target="_blank" rel="noopener noreferrer">Choose a Claude plan ↗</a>
+            <a href="https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans" target="_blank" rel="noopener noreferrer">Usage-credit controls ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Why model choice can matter</summary>
+          <div class="detail-content">
+            <p>A more powerful model is not always the best model for the task. Model choice can affect usage and paid-credit cost.</p>
+            <p>Fable 5 is designed for demanding, long-running work. On Pro it uses paid credits from the first request; Max includes limited Fable use. Sonnet 5 is substantially less expensive when paid credits apply. Published token prices do not establish an exact multiplier for how long an included subscription allowance will last.</p>
+            <a href="https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan" target="_blank" rel="noopener noreferrer">Fable on Claude plans ↗</a>
+            <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Current model pricing ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Team and Enterprise</summary>
+          <div class="detail-content">
+            <p>Team and Enterprise use different pricing, administration, training, and retention rules from individual accounts. Commercial content is not used for training by default, but that does not mean no authorised human access or third-party processing can occur.</p>
+            <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Commercial pricing ↗</a>
+            <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener noreferrer">Commercial retention ↗</a>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Beat 20 -->
+    <article class="beat tool-beat" id="chatgpt" data-title="ChatGPT">
+      <div class="beat-inner">
+        <div class="tool-heading">
+          <div class="tool-monogram openai-monogram">O</div>
+          <div>
+            <p class="eyebrow">OpenAI</p>
+            <h2>ChatGPT</h2>
+            <p class="tool-summary">Work is arranged around substantial everyday deliverables. Codex is arranged around software repositories, terminals, and development tools.</p>
+          </div>
+          <div class="tool-actions">
+            <a class="button button-primary" href="https://chatgpt.com/download/" target="_blank" rel="noopener noreferrer">Download ChatGPT <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener noreferrer">Check current price ↗</a>
+          </div>
+        </div>
+
+        <div class="surface-pair">
+          <section>
+            <span class="surface-label">Work</span>
+            <h3>Finished work product</h3>
+            <p>Useful for reports, presentations, analysis, spreadsheets, recurring updates, and longer workflows.</p>
+            <a href="https://learn.chatgpt.com/docs/get-started-with-work" target="_blank" rel="noopener noreferrer">Official Work guide ↗</a>
+          </section>
+          <section>
+            <span class="surface-label">Codex</span>
+            <h3>Software system</h3>
+            <p>Useful for building and changing software through local folders, repositories, terminals, development tools, and cloud tasks.</p>
+            <a href="https://help.openai.com/en/articles/20001275/" target="_blank" rel="noopener noreferrer">Work and Codex explained ↗</a>
+          </section>
+        </div>
+
+        <div class="plan-strip" aria-label="Selected ChatGPT individual plans">
+          <div><strong>Free</strong><span>US$0</span><small>Work and Codex with limited usage.</small></div>
+          <div><strong>Go</strong><span>US$8/month</span><small>Regional availability and price can vary.</small></div>
+          <div><strong>Plus</strong><span>US$20/month</span><small>Work and Codex included.</small></div>
+          <div><strong>Pro tiers</strong><span>US$100 or $200/month</span><small>Higher shared usage.</small></div>
+        </div>
+
+        <details>
+          <summary>Where does the work run?</summary>
+          <div class="detail-content">
+            <p>Desktop Work can act through approved local files, applications, and the browser. Local commands use operating-system sandboxing and approval controls. Cloud Work runs remotely, although OpenAI’s public documentation is less specific about its container lifecycle than it is for Codex cloud.</p>
+            <p>Codex cloud uses an isolated OpenAI-managed container. Network access is available during setup and off during the agent phase by default unless configured.</p>
+            <a href="https://learn.chatgpt.com/docs/sandboxing" target="_blank" rel="noopener noreferrer">Local sandboxing ↗</a>
+            <a href="https://learn.chatgpt.com/docs/agent-approvals-security" target="_blank" rel="noopener noreferrer">Agent approvals and security ↗</a>
+            <a href="https://learn.chatgpt.com/docs/cloud/internet-access" target="_blank" rel="noopener noreferrer">Cloud internet access ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Where can the data go?</summary>
+          <div class="detail-content">
+            <p>On personal ChatGPT plans, content may be used to train models. The “Improve the model for everyone” setting can be turned off. Temporary Chats are not used for training but can be retained for up to 30 days and may be reviewed for abuse.</p>
+            <p>Business, Enterprise, and Edu content is not used for training by default. Limited authorised personnel and service providers can still access content for support, security, abuse investigation, or legal obligations.</p>
+            <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank" rel="noopener noreferrer">How OpenAI uses data ↗</a>
+            <a href="https://help.openai.com/en/articles/7730893-datacontrols-faq" target="_blank" rel="noopener noreferrer">Data Controls and Temporary Chat ↗</a>
+            <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">Enterprise privacy ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Individual subscription details</summary>
+          <div class="detail-content">
+            <p>OpenAI publishes US-dollar web prices and supports local-currency billing, including Australian dollars, without a stable public table of exact Australian checkout prices. App-store charges can differ.</p>
+            <p>Work and Codex share the subscription allowance. Optional credits can extend supported agentic use after plan limits; API use remains separate.</p>
+            <a href="https://help.openai.com/en/articles/10421635-multi-currency-billing-faq" target="_blank" rel="noopener noreferrer">Multi-currency billing ↗</a>
+            <a href="https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-free-go-plus-pro" target="_blank" rel="noopener noreferrer">Optional credits ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Business and Enterprise</summary>
+          <div class="detail-content">
+            <p>ChatGPT Business is published at US$25 per user monthly or US$20 per user monthly when billed annually, with a minimum of two users. Enterprise and Edu pricing is arranged through sales.</p>
+            <p>Commercial controls reduce training exposure and add administration, but they do not by themselves establish that every client contract, privacy obligation, or data-residency need is satisfied.</p>
+            <a href="https://openai.com/business/pricing/" target="_blank" rel="noopener noreferrer">Business pricing ↗</a>
+            <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">Enterprise privacy ↗</a>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Beat 21 -->
+    <article class="beat tool-beat" id="antigravity" data-title="Google Antigravity">
+      <div class="beat-inner">
+        <div class="tool-heading">
+          <div class="tool-monogram google-monogram">G</div>
+          <div>
+            <p class="eyebrow">Google</p>
+            <h2>Antigravity</h2>
+            <p class="tool-summary">Antigravity 2.0 is presented as a command centre for directing local agents across software projects and workspaces. It is the clearest building-focused environment in this comparison.</p>
+          </div>
+          <div class="tool-actions">
+            <a class="button button-primary" href="https://antigravity.google/download" target="_blank" rel="noopener noreferrer">Download Antigravity <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://antigravity.google/pricing" target="_blank" rel="noopener noreferrer">Check current price ↗</a>
+          </div>
+        </div>
+
+        <div class="antigravity-overview">
+          <section>
+            <h3>Individual access</h3>
+            <p>The individual product is currently US$0 and requires a personal Google account. It includes all product features with basic model limits.</p>
+            <a href="https://antigravity.google/docs/plans" target="_blank" rel="noopener noreferrer">Official plans ↗</a>
+          </section>
+          <section>
+            <h3>What it can do</h3>
+            <p>Agents can edit project files, run terminal commands, use browser capabilities, and connect to external tools through Model Context Protocol servers.</p>
+            <a href="https://antigravity.google/docs/permissions" target="_blank" rel="noopener noreferrer">Official permissions ↗</a>
+          </section>
+          <section>
+            <h3>Paid Google AI plans</h3>
+            <p>Google AI Pro and Ultra provide higher Antigravity limits. Exact current Australian checkout prices were not established from a stable public first-party table, so this page does not guess them.</p>
+            <a href="https://one.google.com/about/google-ai-plans/" target="_blank" rel="noopener noreferrer">Check Google AI plans ↗</a>
+          </section>
+        </div>
+
+        <details>
+          <summary>Where does the work run?</summary>
+          <div class="detail-content">
+            <p>Antigravity 2.0 works with local project folders and local agents. Permissions govern workspace, terminal, URL, browser, and external-tool access.</p>
+            <p>The Antigravity command-line sandbox uses operating-system containment rather than a separate virtual machine or heavy container. It is disabled by default in the command-line tool. Google’s documentation differs across surfaces, so this page does not claim that every Antigravity surface is sandboxed on every platform.</p>
+            <a href="https://antigravity.google/docs/settings" target="_blank" rel="noopener noreferrer">Antigravity settings ↗</a>
+            <a href="https://antigravity.google/docs/cli/sandbox" target="_blank" rel="noopener noreferrer">Command-line sandbox ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Where can the data go?</summary>
+          <div class="detail-content">
+            <p>For individual accounts, Google says Antigravity records and stores user data, interaction data, metadata, and feedback while the service runs. Interactions may be used to improve Google products and machine-learning technologies, and employees or contractors may review them. Users can opt out in settings.</p>
+            <p>The checked official pages do not establish a fixed individual retention period or guarantee Australian processing. Connected services apply their own data rules.</p>
+            <a href="https://antigravity.google/terms" target="_blank" rel="noopener noreferrer">Antigravity terms ↗</a>
+            <a href="https://antigravity.google/docs/settings" target="_blank" rel="noopener noreferrer">Antigravity settings ↗</a>
+            <a href="https://antigravity.google/docs/mcp" target="_blank" rel="noopener noreferrer">External-tool connections ↗</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Organisational use</summary>
+          <div class="detail-content">
+            <p>Google directs organisations to a separately governed Google Cloud enterprise offering with consumption billing, private-networking, and data-residency options. The individual product is not the organisational offering.</p>
+            <a href="https://antigravity.google/docs/enterprise" target="_blank" rel="noopener noreferrer">Antigravity for organisations ↗</a>
+            <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention" target="_blank" rel="noopener noreferrer">Google Cloud retention controls ↗</a>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Beat 22 -->
+    <article class="beat" id="questions" data-title="Questions and next step">
+      <div class="beat-inner question-layout">
+        <section>
+          <p class="eyebrow">Questions we cannot answer tonight</p>
+          <h2>Leave the question with me.</h2>
+          <p class="lead">Submit anonymously, or add your name and email if you would like a direct follow-up. Email addresses will remain private and will never be published.</p>
+          <p class="small-note">Please do not include confidential client information.</p>
+          <a class="button button-primary config-link is-disabled" id="question-form-button" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Question form coming shortly</a>
+        </section>
+        <aside class="qr-panel" aria-label="Question form QR code">
+          <div class="qr-placeholder" id="question-qr">
+            <span>QR</span>
+            <small>Added when the private form is created</small>
+          </div>
+        </aside>
+      </div>
+      <div class="next-build">
+        <p class="eyebrow">Next</p>
+        <h2>Now we build.</h2>
+        <a class="button button-primary config-link is-disabled" id="website-two-button" href="#" aria-disabled="true">Website 2 coming next</a>
+      </div>
+    </article>
+
+    <section class="reading-closing" aria-labelledby="closing-title">
+      <div>
+        <p class="eyebrow">This is iteration one</p>
+        <h2 id="closing-title">Crossing the river by feeling the stones.</h2>
+      </div>
+      <div>
+        <p>Struggle is part of learning how to work with these tools. The next session can examine the real problems that emerged, debug them together, and improve the method.</p>
+        <p class="closing-question">What could you make next?</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Agentic AI for Translators &amp; Interpreters · Michael Broughton · 2026</p>
+    <p>Product information checked 22 July 2026. Verify current details at the linked official sources.</p>
+  </footer>
+
+  <div class="presentation-controls" aria-label="Presentation controls">
+    <button type="button" id="previous-beat" aria-label="Previous presentation beat">←</button>
+    <div class="presentation-status" aria-live="polite">
+      <span id="beat-title">Opening</span>
+      <span><b id="beat-number">1</b> / <b id="beat-total">22</b></span>
+    </div>
+    <button type="button" id="next-beat" aria-label="Next presentation beat">→</button>
+    <button type="button" id="exit-presentation" class="exit-control" aria-label="Exit Presentation Mode">Exit</button>
+  </div>
+  <div class="presentation-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+</body>
+</html>
