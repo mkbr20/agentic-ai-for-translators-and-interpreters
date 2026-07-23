@@ -198,11 +198,11 @@
         <div>
           <p class="eyebrow">A useful term</p>
           <h2>What is vibe coding?</h2>
-          <p class="lead">Vibe coding is a term used to describe creating software by explaining what you want in ordinary language.</p>
-          <p>The AI produces and changes the code while you concentrate mainly on what the finished tool should do. You try what it creates, then tell it what to change.</p>
+          <p class="lead">Vibe coding is a term used for creating software by describing what you want in ordinary language and letting AI write much of the code.</p>
+          <p>In Andrej Karpathy’s original post, it described a particularly hands-off version in which the person did not closely inspect the generated code.</p>
         </div>
         <aside class="source-card">
-          <p>That is what we are doing today. We are vibe coding.</p>
+          <p>That is what we are doing today in a broader sense. We are vibe coding, but with a map and checkpoints.</p>
           <a href="https://x.com/karpathy/status/1886192184808149383?lang=en" target="_blank" rel="noopener noreferrer">Andrej Karpathy’s original post <span aria-hidden="true">↗</span></a>
           <a href="https://karpathy.bearblog.dev/vibe-coding-menugen/" target="_blank" rel="noopener noreferrer">MenuGen: a real example <span aria-hidden="true">↗</span></a>
         </aside>
@@ -252,8 +252,8 @@
             <p data-prompt-text>Interview me one question at a time about the tool I want to make. Help me uncover its purpose, users, needs, constraints, source material, and desired result before we build anything.</p>
             <div class="method-skill">
               <span>Matt Pocock skill</span>
-              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$grill-with-docs</code> <span aria-hidden="true">↗</span></a>
-              <small>It interviews you and records the decisions as you go.</small>
+              <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md" target="_blank" rel="noopener noreferrer"><code>/grill-with-docs</code> <span aria-hidden="true">↗</span></a>
+              <small>It interviews you and records shared language and design decisions as you go.</small>
             </div>
           </div>
         </div>
@@ -275,8 +275,8 @@
             <p data-prompt-text>Turn everything we have agreed into a clear blueprint. Describe who the tool is for, what it must do, what is outside the plan, and how we will know it is complete.</p>
             <div class="method-skill">
               <span>Matt Pocock skill</span>
-              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$to-prd</code> <span aria-hidden="true">↗</span></a>
-              <small>It turns the conversation into a clear build blueprint.</small>
+              <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md" target="_blank" rel="noopener noreferrer"><code>/to-spec</code> <span aria-hidden="true">↗</span></a>
+              <small>It turns the agreed conversation and project context into a clear build specification.</small>
             </div>
           </div>
         </div>
@@ -298,8 +298,8 @@
             <p data-prompt-text>Break this blueprint into small, ordered pieces of work. Each piece should create something useful that can be checked before the next piece begins.</p>
             <div class="method-skill">
               <span>Matt Pocock skill</span>
-              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$to-issues</code> <span aria-hidden="true">↗</span></a>
-              <small>It turns the blueprint into buildable pieces of work.</small>
+              <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md" target="_blank" rel="noopener noreferrer"><code>/to-tickets</code> <span aria-hidden="true">↗</span></a>
+              <small>It turns the blueprint into small, testable pieces and records which pieces block others.</small>
             </div>
           </div>
         </div>
@@ -321,8 +321,8 @@
             <p data-prompt-text>Build the planned pieces one at a time. Check each piece against the blueprint, test that it works, and stop if an important decision is missing.</p>
             <div class="method-skill">
               <span>Matt Pocock skill</span>
-              <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><code>$implement</code> <span aria-hidden="true">↗</span></a>
-              <small>It carries out the planned work and checks the result.</small>
+              <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/implement/SKILL.md" target="_blank" rel="noopener noreferrer"><code>/implement</code> <span aria-hidden="true">↗</span></a>
+              <small>It carries out the planned work, tests it, reviews it, and commits the result.</small>
             </div>
           </div>
         </div>
@@ -377,7 +377,7 @@
           <span>Execution and isolation</span>
           <span>Data handling</span>
         </div>
-        <p class="checked-date">Product information checked <time datetime="2026-07-22">22 July 2026</time>. These products change quickly. Use the official links beside each claim.</p>
+        <p class="checked-date">Product information checked <time datetime="2026-07-23">23 July 2026</time>. These products change quickly. Use the official links beside each claim.</p>
       </div>
     </article>
 
@@ -422,8 +422,8 @@
         <details>
           <summary>Where does the work run?</summary>
           <div class="detail-content">
-            <p>Remote Cowork is now the documented default. Its agent loop and code run in a temporary isolated environment on Anthropic infrastructure. Older local Cowork deployments run the agent loop and connected-folder operations locally while code runs in a dedicated Linux virtual machine.</p>
-            <p>Claude Code can run against a local project, in Anthropic’s cloud, over SSH, or through Windows Subsystem for Linux. Local Code is permission-gated but is not automatically a virtual machine.</p>
+            <p>Where remote Cowork is available, sessions run remotely by default. The agent loop and code run in a temporary isolated environment on Anthropic-managed infrastructure. Remote execution is still in beta and is rolling out gradually. Local execution remains available for existing desktop deployments. In a local session, the agent loop and connected-folder operations run on the device, while code runs in a dedicated Linux virtual machine.</p>
+            <p>Claude Code can run on your machine, in Anthropic’s cloud, over SSH, or through Windows Subsystem for Linux. Local sessions run on your machine. The permission mode controls which actions need approval. Claude Code can also use an operating-system sandbox for Bash on macOS, Linux and Windows Subsystem for Linux 2, but that sandbox is not a virtual machine and can be configured or bypassed.</p>
             <a href="https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview" target="_blank" rel="noopener noreferrer">Cowork architecture ↗</a>
             <a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener noreferrer">Claude Code sandboxing ↗</a>
           </div>
@@ -432,10 +432,12 @@
         <details>
           <summary>Where can the data go?</summary>
           <div class="detail-content">
-            <p>Remote Cowork processes opened local files on Anthropic servers. Local Claude Code commands run locally, but prompts, relevant file content, outputs, and code context are sent for model processing.</p>
-            <p>On consumer accounts, conversations can be used for model improvement when Model Improvement is enabled. Incognito chats are not used for model improvement. Commercial chats and coding sessions are not used for training by default.</p>
+            <p>Remote Cowork processes the work, including local files it opens, on Anthropic servers. Local Claude Code commands run locally, but prompts and model outputs travel over the network, and files Claude reads become part of the session context.</p>
+            <p>On Free, Pro and Max accounts, chats and coding sessions may be used to improve Claude when Model Improvement is enabled. Conversations flagged for safety review and material explicitly submitted as feedback can also be used. Incognito chats are not used for model improvement. On Team and Enterprise accounts, Anthropic says chats and coding sessions are not used to train its models unless the organisation opts in or a user explicitly submits feedback.</p>
             <a href="https://support.claude.com/en/articles/13364135-use-claude-cowork-safely" target="_blank" rel="noopener noreferrer">Cowork safety ↗</a>
+            <a href="https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview" target="_blank" rel="noopener noreferrer">Cowork data processing ↗</a>
             <a href="https://code.claude.com/docs/en/data-usage" target="_blank" rel="noopener noreferrer">Claude Code data flow ↗</a>
+            <a href="https://code.claude.com/docs/en/how-claude-code-works" target="_blank" rel="noopener noreferrer">Claude Code context ↗</a>
             <a href="https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training" target="_blank" rel="noopener noreferrer">Consumer training controls ↗</a>
             <a href="https://privacy.claude.com/en/articles/7996885-how-do-you-use-personal-data-in-model-training" target="_blank" rel="noopener noreferrer">Commercial data policy ↗</a>
           </div>
@@ -447,6 +449,7 @@
             <p>Anthropic publishes individual prices in US dollars and says regional pricing, currency, and taxes can vary. Pro is US$20 monthly or US$200 annually. Max 5× is US$100 monthly and Max 20× is US$200 monthly.</p>
             <p>Reaching the included Pro or Max allowance does not silently enable unlimited billing. Optional usage credits must be enabled separately, and Anthropic provides a monthly cap and auto-reload controls.</p>
             <a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan" target="_blank" rel="noopener noreferrer">Choose a Claude plan ↗</a>
+            <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan" target="_blank" rel="noopener noreferrer">Regional pricing details ↗</a>
             <a href="https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans" target="_blank" rel="noopener noreferrer">Usage-credit controls ↗</a>
           </div>
         </details>
@@ -455,8 +458,10 @@
           <summary>Why model choice can matter</summary>
           <div class="detail-content">
             <p>A more powerful model is not always the best model for the task. Model choice can affect usage and paid-credit cost.</p>
-            <p>Fable 5 is designed for demanding, long-running work. On Pro it uses paid credits from the first request; Max includes limited Fable use. Sonnet 5 is substantially less expensive when paid credits apply. Published token prices do not establish an exact multiplier for how long an included subscription allowance will last.</p>
+            <p>Fable 5 is designed for demanding, long-running work. On Pro it uses paid credits from the first request. Max includes Fable 5 for up to 50% of the weekly plan limit. Sonnet 5 is substantially less expensive when paid credits apply. Published token prices do not establish an exact multiplier for how long an included subscription allowance will last.</p>
+            <p>Fable 5 is also a Covered Model. Anthropic requires prompts and outputs to be retained for at least 30 days wherever Fable 5 is offered, so it is not available with zero data retention.</p>
             <a href="https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan" target="_blank" rel="noopener noreferrer">Fable on Claude plans ↗</a>
+            <a href="https://support.claude.com/en/articles/15425695-covered-models" target="_blank" rel="noopener noreferrer">Fable 5 data-retention rule ↗</a>
             <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Current model pricing ↗</a>
           </div>
         </details>
@@ -464,8 +469,9 @@
         <details>
           <summary>Team and Enterprise</summary>
           <div class="detail-content">
-            <p>Team and Enterprise use different pricing, administration, training, and retention rules from individual accounts. Commercial content is not used for training by default, but that does not mean no authorised human access or third-party processing can occur.</p>
+            <p>Team and Enterprise use different pricing, administration, training and retention rules from individual accounts. The customer organisation controls its member data, and Anthropic processes that data to provide the service. Anthropic says commercial chats and coding sessions are not used to train its models unless the organisation opts in or a user explicitly submits feedback. Content can still be retained or reviewed for safety, feedback and legal reasons.</p>
             <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Commercial pricing ↗</a>
+            <a href="https://privacy.claude.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller" target="_blank" rel="noopener noreferrer">Organisation and Anthropic roles ↗</a>
             <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener noreferrer">Commercial retention ↗</a>
           </div>
         </details>
@@ -504,8 +510,8 @@
         </div>
 
         <div class="plan-strip" aria-label="Selected ChatGPT individual plans">
-          <div><strong>Free</strong><span>US$0</span><small>Work and Codex with limited usage.</small></div>
-          <div><strong>Go</strong><span>US$8/month</span><small>Regional availability and price can vary.</small></div>
+          <div><strong>Free</strong><span>US$0</span><small>Codex included for quick tasks. Work is still rolling out.</small></div>
+          <div><strong>Go</strong><span>US$8/month</span><small>Available where ChatGPT is supported. Local billing varies. <a href="https://help.openai.com/en/articles/11989085-what-is-chatgpt-go" target="_blank" rel="noopener noreferrer">Details ↗</a></small></div>
           <div><strong>Plus</strong><span>US$20/month</span><small>Work and Codex included.</small></div>
           <div><strong>Pro tiers</strong><span>US$100 or $200/month</span><small>Higher shared usage.</small></div>
         </div>
@@ -513,8 +519,9 @@
         <details>
           <summary>Where does the work run?</summary>
           <div class="detail-content">
-            <p>Desktop Work can act through approved local files, applications, and the browser. Local commands use operating-system sandboxing and approval controls. Cloud Work runs remotely, although OpenAI’s public documentation is less specific about its container lifecycle than it is for Codex cloud.</p>
-            <p>Codex cloud uses an isolated OpenAI-managed container. Network access is available during setup and off during the agent phase by default unless configured.</p>
+            <p>Work on web and mobile runs in the cloud. In the desktop app, Work can use local files and desktop apps with permission. Cloud Work chats sync across devices. Local chats stay on the computer, and local files and outputs remain there unless you explicitly move or share them. “Local” describes chat and file storage; it is not a promise that model processing remains on the device.</p>
+            <p>When a local chat runs commands, the ChatGPT desktop app uses an operating-system-enforced sandbox together with approval controls. Codex cloud runs in an isolated OpenAI-managed container. Setup can access the network, while the agent phase blocks internet access by default unless you enable it.</p>
+            <a href="https://help.openai.com/en/articles/20001275/" target="_blank" rel="noopener noreferrer">Cloud and local Work ↗</a>
             <a href="https://learn.chatgpt.com/docs/sandboxing" target="_blank" rel="noopener noreferrer">Local sandboxing ↗</a>
             <a href="https://learn.chatgpt.com/docs/agent-approvals-security" target="_blank" rel="noopener noreferrer">Agent approvals and security ↗</a>
             <a href="https://learn.chatgpt.com/docs/cloud/internet-access" target="_blank" rel="noopener noreferrer">Cloud internet access ↗</a>
@@ -524,10 +531,14 @@
         <details>
           <summary>Where can the data go?</summary>
           <div class="detail-content">
-            <p>On personal ChatGPT plans, content may be used to train models. The “Improve the model for everyone” setting can be turned off. Temporary Chats are not used for training but can be retained for up to 30 days and may be reviewed for abuse.</p>
-            <p>Business, Enterprise, and Edu content is not used for training by default. Limited authorised personnel and service providers can still access content for support, security, abuse investigation, or legal obligations.</p>
+            <p>On individual ChatGPT and Codex services, OpenAI may use content to train models unless you opt out. Codex has a separate training control for full environments, and feedback you explicitly submit may still include the associated conversation. Temporary Chats are not used for training, are deleted from OpenAI systems after 30 days, and may be reviewed only to monitor for abuse.</p>
+            <p>Ordinary chats remain in your account until you delete them. Deleted chats are scheduled for removal from OpenAI systems within 30 days, subject to de-identification and security or legal exceptions. Files saved to Library must be deleted separately. Turning off model training does not mean no storage or human access: OpenAI says conversations may be reviewed for safety and policy purposes, and instructed service providers may process personal data to operate the service.</p>
+            <p>Business, Enterprise and Edu inputs and outputs are not used for training by default. Access rules differ by plan. For Business, OpenAI documents limited access by authorised employees and specialised contractors; for Enterprise and Edu, authorised OpenAI staff access is limited to incident resolution, conversation recovery with explicit permission, or legal requirements. Workspace administrators may also have access and retention controls.</p>
             <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank" rel="noopener noreferrer">How OpenAI uses data ↗</a>
             <a href="https://help.openai.com/en/articles/7730893-datacontrols-faq" target="_blank" rel="noopener noreferrer">Data Controls and Temporary Chat ↗</a>
+            <a href="https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt" target="_blank" rel="noopener noreferrer">Chat and file retention ↗</a>
+            <a href="https://help.openai.com/en/articles/6783457" target="_blank" rel="noopener noreferrer">ChatGPT safety and review ↗</a>
+            <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">OpenAI privacy policy ↗</a>
             <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">Enterprise privacy ↗</a>
           </div>
         </details>
@@ -535,8 +546,8 @@
         <details>
           <summary>Individual subscription details</summary>
           <div class="detail-content">
-            <p>OpenAI publishes US-dollar web prices and supports local-currency billing, including Australian dollars, without a stable public table of exact Australian checkout prices. App-store charges can differ.</p>
-            <p>Work and Codex share the subscription allowance. Optional credits can extend supported agentic use after plan limits; API use remains separate.</p>
+            <p>OpenAI’s agentic pricing page lists US-dollar reference prices. ChatGPT web checkout supports localised billing, including Australian dollars. Subscriptions bought through the iOS or Android apps are managed by Apple or Google and appear in local currency.</p>
+            <p>Work and Codex draw from the same included agentic allowance. On eligible Plus and Pro accounts, purchased credits can extend supported features after included limits are reached; availability varies by feature and plan. API usage is not included and is billed separately.</p>
             <a href="https://help.openai.com/en/articles/10421635-multi-currency-billing-faq" target="_blank" rel="noopener noreferrer">Multi-currency billing ↗</a>
             <a href="https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-free-go-plus-pro" target="_blank" rel="noopener noreferrer">Optional credits ↗</a>
           </div>
@@ -545,9 +556,10 @@
         <details>
           <summary>Business and Enterprise</summary>
           <div class="detail-content">
-            <p>ChatGPT Business is published at US$25 per user monthly or US$20 per user monthly when billed annually, with a minimum of two users. Enterprise and Edu pricing is arranged through sales.</p>
+            <p>Standard ChatGPT Business seats cost US$25 per user monthly or US$20 per user monthly when billed annually, with a minimum of two seats, and include ChatGPT plus Codex. Enterprise and Edu pricing is arranged through sales.</p>
             <p>Commercial controls reduce training exposure and add administration, but they do not by themselves establish that every client contract, privacy obligation, or data-residency need is satisfied.</p>
             <a href="https://openai.com/business/pricing/" target="_blank" rel="noopener noreferrer">Business pricing ↗</a>
+            <a href="https://help.openai.com/en/articles/8792828" target="_blank" rel="noopener noreferrer">ChatGPT Business seats ↗</a>
             <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">Enterprise privacy ↗</a>
           </div>
         </details>
@@ -573,17 +585,20 @@
         <div class="antigravity-overview">
           <section>
             <h3>Individual access</h3>
-            <p>The individual product is currently US$0 and requires a personal Google account. It includes all product features with basic model limits.</p>
+            <p>Antigravity is available at no charge for personal Google accounts in approved countries, including Australia, for users aged 18 or over. All plans include the product’s features, but model availability and rate limits differ. Users without Pro or Ultra receive a weekly-refreshed baseline quota.</p>
             <a href="https://antigravity.google/docs/plans" target="_blank" rel="noopener noreferrer">Official plans ↗</a>
+            <a href="https://antigravity.google/docs/faq" target="_blank" rel="noopener noreferrer">Eligibility and geography ↗</a>
           </section>
           <section>
             <h3>What it can do</h3>
             <p>Agents can edit project files, run terminal commands, use browser capabilities, and connect to external tools through Model Context Protocol servers.</p>
             <a href="https://antigravity.google/docs/permissions" target="_blank" rel="noopener noreferrer">Official permissions ↗</a>
+            <a href="https://antigravity.google/docs/mcp" target="_blank" rel="noopener noreferrer">Official external-tool guide ↗</a>
           </section>
           <section>
             <h3>Paid Google AI plans</h3>
-            <p>Google AI Pro and Ultra provide higher Antigravity limits. Exact current Australian checkout prices were not established from a stable public first-party table, so this page does not guess them.</p>
+            <p>Google AI Pro and Ultra provide higher Antigravity limits. After a model’s baseline quota is exhausted, users on those plans can choose whether purchased AI credits are used for overage. “Never” waits for the quota to refresh; “Always” spends credits automatically. Check the current Google AI checkout page for the subscription price.</p>
+            <a href="https://antigravity.google/docs/plans" target="_blank" rel="noopener noreferrer">Antigravity limits and overage ↗</a>
             <a href="https://one.google.com/about/google-ai-plans/" target="_blank" rel="noopener noreferrer">Check Google AI plans ↗</a>
           </section>
         </div>
@@ -591,9 +606,10 @@
         <details>
           <summary>Where does the work run?</summary>
           <div class="detail-content">
-            <p>Antigravity 2.0 works with local project folders and local agents. Permissions govern workspace, terminal, URL, browser, and external-tool access.</p>
+            <p>Antigravity 2.0 can operate directly in local project folders or in an isolated Git worktree. Permissions govern workspace, terminal, URL, browser, and external-tool access.</p>
             <p>The Antigravity command-line sandbox uses operating-system containment rather than a separate virtual machine or heavy container. It is disabled by default in the command-line tool. Google’s documentation differs across surfaces, so this page does not claim that every Antigravity surface is sandboxed on every platform.</p>
-            <a href="https://antigravity.google/docs/settings" target="_blank" rel="noopener noreferrer">Antigravity settings ↗</a>
+            <a href="https://antigravity.google/docs/getting-started" target="_blank" rel="noopener noreferrer">Local and worktree modes ↗</a>
+            <a href="https://antigravity.google/docs/permissions" target="_blank" rel="noopener noreferrer">Antigravity permissions ↗</a>
             <a href="https://antigravity.google/docs/cli/sandbox" target="_blank" rel="noopener noreferrer">Command-line sandbox ↗</a>
           </div>
         </details>
@@ -601,10 +617,11 @@
         <details>
           <summary>Where can the data go?</summary>
           <div class="detail-content">
-            <p>For individual accounts, Google says Antigravity records and stores user data, interaction data, metadata, and feedback while the service runs. Interactions may be used to improve Google products and machine-learning technologies, and employees or contractors may review them. Users can opt out in settings.</p>
-            <p>The checked official pages do not establish a fixed individual retention period or guarantee Australian processing. Connected services apply their own data rules.</p>
+            <p>For personal-account use, Google says Antigravity records and stores user data, interaction data, metadata, and feedback while the service runs. Interactions may be used to improve Google products and machine-learning technologies, and employees or contractors may review them. In Settings, users can disable sharing interaction logs to improve models.</p>
+            <p>Google’s personal-account terms provide a deletion-request route but do not state a fixed deletion or retention period, and the checked pages do not promise that processing stays in Australia. Model Context Protocol connections can send context to remote services or execute their tools, so check each connected service before sharing client material.</p>
             <a href="https://antigravity.google/terms" target="_blank" rel="noopener noreferrer">Antigravity terms ↗</a>
             <a href="https://antigravity.google/docs/settings" target="_blank" rel="noopener noreferrer">Antigravity settings ↗</a>
+            <a href="https://antigravity.google/docs/faq" target="_blank" rel="noopener noreferrer">Antigravity privacy FAQ ↗</a>
             <a href="https://antigravity.google/docs/mcp" target="_blank" rel="noopener noreferrer">External-tool connections ↗</a>
           </div>
         </details>
@@ -612,9 +629,9 @@
         <details>
           <summary>Organisational use</summary>
           <div class="detail-content">
-            <p>Google directs organisations to a separately governed Google Cloud enterprise offering with consumption billing, private-networking, and data-residency options. The individual product is not the organisational offering.</p>
+            <p>Organisations can connect Antigravity 2.0 or Antigravity CLI to Gemini Enterprise Agent Platform in their own Google Cloud project under Google Cloud terms. Google documents consumption-based billing, private networking, and selectable data locations; the currently listed endpoints are global, EU multi-region, and US multi-region. Antigravity IDE is not supported for this enterprise integration. Zero data retention is not automatic and depends on the models, features, and configuration used.</p>
             <a href="https://antigravity.google/docs/enterprise" target="_blank" rel="noopener noreferrer">Antigravity for organisations ↗</a>
-            <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention" target="_blank" rel="noopener noreferrer">Google Cloud retention controls ↗</a>
+            <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention" target="_blank" rel="noopener noreferrer">Google Cloud retention controls ↗</a>
           </div>
         </details>
       </div>
@@ -633,7 +650,7 @@
         <aside class="qr-panel" aria-label="Question form QR code">
           <div class="qr-placeholder" id="question-qr">
             <span>QR</span>
-            <small>Added when the private form is created</small>
+            <small>Added when the audience question form is ready</small>
           </div>
         </aside>
       </div>
@@ -658,7 +675,7 @@
 
   <footer class="site-footer">
     <p>Agentic AI for Translators &amp; Interpreters · Michael Broughton · 2026</p>
-    <p>Product information checked 22 July 2026. Verify current details at the linked official sources.</p>
+    <p>Product information checked 23 July 2026. Verify current details at the linked official sources.</p>
   </footer>
 
   <div class="presentation-controls" aria-label="Presentation controls">

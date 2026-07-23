@@ -18,7 +18,7 @@ Open `site-config.js` in a text editor. Paste the Google Form address into `ques
 
 Product information is grouped under the Claude, ChatGPT, and Google Antigravity sections in `index.html`. Keep each factual claim beside its direct official source, update the visible checked date, and do not publish anything the research file labels unverified.
 
-The complete source audit is in `research/tool-comparison-primary-sources.md`.
+The current full source audit is in `research/site-factual-audit-2026-07-23.md`. The original comparison research remains in `research/tool-comparison-primary-sources.md`.
 
 ## Publish with GitHub Pages
 
@@ -29,4 +29,5 @@ Create a public repository named `agentic-ai-for-translators-and-interpreters`, 
 - `website-1_concepts-and-tools_brief.md` contains the original brief.
 - `CONTEXT.md` contains the shared project language.
 - `docs/adr/0001-use-a-simple-static-architecture.md` records the static architecture decision.
-- `research/tool-comparison-primary-sources.md` contains the dated primary-source research.
+- `research/site-factual-audit-2026-07-23.md` contains the current full factual and link audit.
+- `research/tool-comparison-primary-sources.md` contains the original dated comparison research.

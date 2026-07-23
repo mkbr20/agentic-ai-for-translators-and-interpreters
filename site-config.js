@@ -7,5 +7,5 @@ window.SITE_CONFIG = {
   questionQrImage: "assets/question-form-qr.svg",
   websiteTwoUrl: "",
   eventUrl: "https://office.ausit.org/event-6748203",
-  productInfoChecked: "22 July 2026"
+  productInfoChecked: "23 July 2026"
 };

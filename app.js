@@ -221,7 +221,7 @@
       questionQr.innerHTML = "";
       const image = document.createElement("img");
       image.src = config.questionQrImage;
-      image.alt = "QR code for the private audience question form";
+      image.alt = "QR code for the audience question form";
       questionQr.appendChild(image);
     }
   }
